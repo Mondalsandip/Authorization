@@ -1,0 +1,16 @@
+{% extends 'authapp/base.html'%}
+
+{% block content %}
+
+
+{% if user.is_authenticated %}
+<p>User Name: {{ user.username }}</p>
+<p> Name: {{ user.first_name }}  {{ user.last_name }}</p>
+<p>Password: {{ user.password }}</p>
+<p>Email: {{ user.email }}</p>
+{% else %}
+<h1>To Check details please login </h1>
+
+{% endif %}
+
+{% endblock %}
